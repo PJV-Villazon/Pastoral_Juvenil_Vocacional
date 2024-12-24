@@ -3,11 +3,12 @@ body {
     padding: 0;
     margin: 0;
     font-family: Arial, sans-serif;
+    width: 100vw;
 }
 
 header {
     display: flex;
-    gap: 150px;
+    justify-content: space-between;
     padding: 10px;
     align-items: center;
     background-color: aqua;
@@ -15,6 +16,10 @@ header {
 
 .logo{
     height: 90px
+}
+
+.barnav{
+    text-align: right;
 }
 
 .navbar {
@@ -73,16 +78,11 @@ header {
     overflow: hidden;
 }
 
-.image-scroll {
-    display: flex;
-    width: 100%;
-    transition: transform 1s ease;
-}
 
 .image-scroll img {
     width: 100vw;
     height: 400px; /* Ocupa toda la pantalla */
-    object-fit: cover; /* Mantiene la proporción de la imagen */
+    object-fit:fill; /* Mantiene la proporción de la imagen */
 }
 
 nav a {
@@ -109,6 +109,7 @@ nav a {
     padding-top: 20px;
     padding-bottom: 10px;
     background-color: #C6FF42;
+    width: 100vw;
 }
 
 .objge {
@@ -213,6 +214,7 @@ nav a {
 
 .mapa {
     text-align: center;
+    padding-bottom: 20px;
 }
 
 .maps{
@@ -220,17 +222,56 @@ nav a {
     height: 350px;
 }
 
-@media (max-width: 1080px) {
+.footer {
+    background-color: #2d2d2d;
+    color: #ffffff;
+    padding: 30px 15px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Secciones individuales */
+.footer-section {
+    margin-bottom: 20px;
+}
+
+
+
+.footer-section h3 {
+    color: #f39c12;
+    margin-bottom: 10px;
+}
+
+/* Enlaces */
+.footer-section a {
+    color: #f39c12;
+    text-decoration: none;
+}
+
+.footer-legal{
+    text-align: center;
+}
+
+
+@media (max-width: 768px) {
+    /* Encabezado */
     header {
-        align-items: flex-start;
-        width: 100vw;
-        gap: 50px;
+        display: flex;
     }
 
-    .logo{
-        height: 50px
+    .logo {
+        height: 50px;
+        margin-bottom: 10px;
     }
     
+    /* Menú de navegación */
     .nav-list {
         display: none;
         flex-direction: column;
@@ -241,6 +282,7 @@ nav a {
         width: 200px;
         border-radius: 5px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        padding: 10px 0;
     }
 
     .nav-list.show {
@@ -249,59 +291,99 @@ nav a {
 
     .nav-list li {
         margin: 10px 0;
+        text-align: center;
     }
 
     .menu-toggle {
         display: block;
+        margin-left: auto;
+        padding-right: 20px;
+        cursor: pointer;
     }
 
+    /* Columnas generales */
     .colums {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .sec2 {
-        padding: 20px;
-        flex-direction: column-reverse;
-        width: 100vw;
-        text-align: left;
-    }
-
-    .imgsec{
-        height: 200px;
-    }
-
-    .mvos {
-        flex-direction: column;
-        align-items: center;
-        width: 100vw;
-    }
-
-    .objge{
-        width: 50vw;
-        padding: 30px;
-    }
-
-    .historia{
-        text-align: left;
-    }
-
-    .image-scroll-container {
-        padding: 10px 0;
-    }
-
-    .btn-galeria {
-        flex-direction: column;
-        gap: 10px;
-    }
-    .google{
         display: flex;
         flex-direction: column;
-    }
-    
-    .maps{
-    width: 300px;
-    height: 150px;
+        gap: 10px;
     }
 
+    /* Segunda sección */
+    .sec2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .imgsec {
+        height: 400px;
+        max-width: 100%;
+        object-fit: cover;
+    }
+
+    /* Módulos variados */
+    .mvos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .objge {
+        width: 60%;
+        padding: 30px;
+        text-align: center;
+    }
+
+    .historia {
+        text-align: left;
+        padding: 15px;
+    }
+
+    /* Botones de galería */
+    .btn-galeria {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    /* Enlaces Google */
+    .google {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* Pie de página */
+    .footer {
+        background-color: #2d2d2d;
+        color: #ffffff;
+        padding: 30px 15px;
+        text-align: center;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: auto;
+    }
+    
+    .footer-section {
+        margin-bottom: 20px;
+    }
+    
+    .footer-section h3 {
+        color: #f39c12;
+        margin-bottom: 10px;
+    }
+    
+    .footer-section a {
+        color: #f39c12;
+        text-decoration: none;
+    }
 }
