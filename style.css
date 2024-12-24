@@ -206,16 +206,6 @@ nav a {
     text-align: center;
 }
 
-.google {
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-}
-
-.mapa {
-    text-align: center;
-    padding-bottom: 20px;
-}
 
 .maps{
     width: 500px;
@@ -350,13 +340,6 @@ nav a {
         align-items: center;
     }
 
-    /* Enlaces Google */
-    .google {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
 
     .maps{
         width: 80vw;
