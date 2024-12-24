@@ -72,12 +72,6 @@ header {
     cursor: pointer;
 }
 
-.image-scroll-container {
-    position: relative;
-    height: 30vw;
-    overflow: hidden;
-}
-
 
 .image-scroll img {
     width: 100vw;
