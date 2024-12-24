@@ -1,0 +1,303 @@
+/* Estilo básico para el contenedor de imágenes */
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    gap: 150px;
+    padding: 10px;
+    align-items: center;
+    background-color: aqua;
+}
+
+.logo{
+    height: 90px
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li {
+    margin: 0 10px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-list a:hover {
+    background-color: #0066ff;
+}
+
+.imgsec{
+    height: 400px;
+}
+
+/* Estilos para móviles */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+.image-scroll-container {
+    position: relative;
+    height: 30vw;
+    overflow: hidden;
+}
+
+.image-scroll {
+    display: flex;
+    width: 100%;
+    transition: transform 1s ease;
+}
+
+.image-scroll img {
+    width: 100vw;
+    height: 400px; /* Ocupa toda la pantalla */
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+}
+
+nav a {
+    padding: 5px;
+    margin: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: large;
+}
+
+.sec2 {
+    padding: 50px;
+    background-color: red;
+}
+
+.colums {
+    display: flex;
+    gap: 20px;
+}
+
+.mvos {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    background-color: #C6FF42;
+}
+
+.objge {
+    background-color: aqua;
+    padding: 20px;
+    margin: 5px;
+    border-radius: 10px;
+    justify-content: space-between;
+    width: 20vw;
+    text-align: center;
+}
+
+.galeria {
+    text-align: center;
+}
+
+.btn-galeria {
+    justify-content: space-around;
+    display: flex;
+}
+
+.formulario {
+    background: #F5A262;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.form-section {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.form-section h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.form-section p {
+    text-align: center;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    resize: none;
+}
+
+.form-group button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.form-group button:hover {
+    background-color: #0056b3;
+}
+
+.red {
+    width: 70px;
+    margin: 10px;
+}
+
+.enlaces {
+    text-align: center;
+}
+
+.google {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.mapa {
+    text-align: center;
+}
+
+.maps{
+    width: 500px;
+    height: 350px;
+}
+
+@media (max-width: 768px) {
+    header {
+        align-items: flex-start;
+        width: 100vw;
+    }
+
+    .logo{
+        height: 50px
+    }
+    
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        background-color: #0044cc;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-list.show {
+        display: flex;
+    }
+
+    .nav-list li {
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .colums {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .sec2 {
+        padding: 20px;
+        flex-direction: column-reverse;
+        width: 100vw;
+        text-align: center;
+    }
+
+    .imgsec{
+        height: 300px;
+    }
+
+    .mvos {
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+    }
+
+    .objge{
+        width: 50vw;
+        padding: 30px;
+    }
+
+    .historia{
+        text-align: left;
+    }
+
+    .image-scroll-container {
+        padding: 10px 0;
+    }
+
+    .btn-galeria {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .google{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+
+}
