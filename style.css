@@ -1,4 +1,5 @@
 /* Estilo básico para el contenedor de imágenes */
+/* Estilo básico para el contenedor de imágenes */
 body {
     padding: 0;
     margin: 0;
@@ -40,6 +41,7 @@ header {
     display: flex;
     margin: 0;
     padding: 0;
+    align-items: end;
 }
 
 .nav-list li {
@@ -73,10 +75,20 @@ header {
 }
 
 
+
 .image-scroll img {
     width: 100vw;
     height: 400px; /* Ocupa toda la pantalla */
     object-fit:fill; /* Mantiene la proporción de la imagen */
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
 }
 
 nav a {
@@ -203,7 +215,7 @@ nav a {
 .mapa{
     text-align: center;
     padding-bottom: 10px;
-} 
+}
 
 .maps{
     width: 500px;
@@ -250,6 +262,11 @@ nav a {
 
 @media (max-width: 768px) {
     /* Encabezado */
+
+    body{
+        font-size: auto;
+    }
+
     header {
         display: flex;
     }
@@ -311,6 +328,15 @@ nav a {
         object-fit: cover;
     }
 
+    .form-section {
+        max-width: 70vw;
+        margin: 40px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background-color: #f9f9f9;
+    }
+
     /* Módulos variados */
     .mvos {
         display: flex;
@@ -338,9 +364,11 @@ nav a {
         align-items: center;
     }
 
+    /* Enlaces Google */
+
 
     .maps{
-        width: 80vw;
+        width: 350px;
         height: 350px;
     }
 
@@ -352,11 +380,15 @@ nav a {
         text-align: center;
         font-size: 14px;
         line-height: 1.6;
+        flex-direction: column;
     }
     
     .footer-container {
-        max-width: 1200px;
+        max-width: 100vw;
         margin: auto;
+        flex-direction: column;
+        text-align: center;
+
     }
     
     .footer-section {
