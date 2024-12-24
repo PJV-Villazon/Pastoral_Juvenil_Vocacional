@@ -358,6 +358,11 @@ nav a {
         gap: 10px;
     }
 
+    .maps{
+        width: 350px;
+        height: 350px;
+    }
+
     /* Pie de página */
     .footer {
         background-color: #2d2d2d;
