@@ -206,6 +206,10 @@ nav a {
     text-align: center;
 }
 
+.mapa{
+    text-align: center;
+    padding-bottom: 10px;
+} 
 
 .maps{
     width: 500px;
